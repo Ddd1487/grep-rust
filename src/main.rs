@@ -9,7 +9,6 @@ struct Cli {
 }
 fn main() {
     let args = Cli::parse();
-    //println!("pattern: {:?}, path: {:?}", args.pattern, args.path);
 
     let file = File::open(&args.path).expect("File couldn't be opened");
     let content = BufReader::new(file);
